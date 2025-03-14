@@ -10,9 +10,9 @@ metadata:
     version: 1.0.0
     managed-by: kubectl
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ulalax/api-tester
-    argocd-image-updater.argoproj.io/ulalax/api-tester.update-strategy: latest
-    argocd-image-updater.argoproj.io/ulalax/api-tester.allow-tags: regex:^([0-9]+\.[0-9]+\.[0-9]+)$
+    argocd-image-updater.argoproj.io/image-list: ulalax-api-tester=ulalax/api-tester
+    argocd-image-updater.argoproj.io/ulalax-api-tester.update-strategy: name
+    argocd-image-updater.argoproj.io/ulalax-api-tester.allow-tags: regexp:^1.1.1-[0-9]{6}.[0-9]{6}$
 spec:
   replicas: 2
   strategy:
